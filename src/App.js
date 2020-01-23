@@ -1,11 +1,11 @@
 import React from 'react';
-
+import { connect } from 'react-redux';
 import Header from './components/Header';
 import AddedFeatures from './components/AddedFeatures';
 import AdditionalFeatures from './components/AdditionalFeatures';
 import Total from './components/Total';
 
-const App = () => {
+const App = (props) => {
   const state = {
     additionalPrice: 0,
     car: {
@@ -28,7 +28,7 @@ const App = () => {
   };
 
   const buyItem = item => {
-    // dipsatch an action here to add an item
+    dispatchEvent({ type: 'ADD_FEATURE', payload:})
   };
 
   return (
@@ -44,5 +44,13 @@ const App = () => {
     </div>
   );
 };
+
+// const mapStateToProps = state => {
+//   return{
+//     state
+//   }
+// }
+
+// export default connect(mapStateToProps, { })(App);
 
 export default App;
